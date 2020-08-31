@@ -10,7 +10,7 @@ do
     curr_date=`date "+%d.%m.%y %H:%M:%S"`
 
     # Because "if" uses last command result  with $? ping MUST be right before it
-    ping -c 1 8.8.8.8 > /dev/null
+    ping -c 1 -w 4 8.8.8.8 > /dev/null
 
     if [ "$?" -ne 0 ]
     then
